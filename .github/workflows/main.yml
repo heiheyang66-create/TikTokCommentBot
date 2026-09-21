@@ -1,1 +1,46 @@
+name: Build TikTokCommentBot
 
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fakeroot git make perl build-essential
+
+    - name: Setup Theos
+      run: |
+      1
+        git clone --recursive https://github.com/theos/theos.git $HOME/theos
+        echo "THEOS=$HOME/theos" >> $GITHUB_ENV
+
+    - name: Setup iOS SDK
+      run: |
+        mkdir -p $THEOS/sdks
+        cd $THEOS/sdks
+        wget -q https://github.com/theos/sdks/archive/refs/heads/master.tar.gz -O sdks.tar.gz
+        tar -xzf sdks.tar.gz
+        mv sdks-master/iPhoneOS15.0.sdk .
+        rm -rf sdks-master sdks.tar.gz
+
+    - name: Build tweak
+      run: |
+        export THEOS=$HOME/theos
+        make package FINAL=yes
+
+    - name: Upload deb artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: tiktokcommentbot-deb
+        path: packages/*.deb
+3
