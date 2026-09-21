@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install deps
         run: |
           sudo apt-get update
@@ -18,6 +18,7 @@ jobs:
         run: |
           mkdir -p $HOME/theos/sdks
           cd $HOME/theos/sdks
+          
           wget -q https://github.com/theos/sdks/archive/refs/heads/master.tar.gz -O sdk.tar.gz
           tar xzf sdk.tar.gz
           mv sdks-master/iPhoneOS15.0.sdk .
@@ -25,7 +26,7 @@ jobs:
         run: |
           export THEOS=$HOME/theos
           make package FINAL=yes
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: deb
           path: packages/*.deb
