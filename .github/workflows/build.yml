@@ -1,0 +1,31 @@
+name: Build
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fakeroot git make perl build-essential
+      - name: Setup Theos
+        run: git clone --recursive https://github.com/theos/theos.git $HOME/theos
+      - name: Setup SDK
+        run: |
+          mkdir -p $HOME/theos/sdks
+          cd $HOME/theos/sdks
+          wget -q https://github.com/theos/sdks/archive/refs/heads/master.tar.gz -O sdk.tar.gz
+          tar xzf sdk.tar.gz
+          mv sdks-master/iPhoneOS15.0.sdk .
+      - name: Build
+        run: |
+          export THEOS=$HOME/theos
+          make package FINAL=yes
+      - uses: actions/upload-artifact@v3
+        with:
+          name: deb
+          path: packages/*.deb
