@@ -1,0 +1,8 @@
+Package: com.heiheyang.tiktokcommentbot
+Name: TikTokCommentBot
+Version: 6.0
+Architecture: iphoneos-arm64
+Description: TikTok Comment Auto Reply Bot
+Maintainer: heiheyang66
+Author: heiheyang66
+Section: Tweaks
