@@ -11,9 +11,14 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y fakeroot git make perl build-essential
-      - name: Setup Theos
-        run: git clone --recursive https://github.com/theos/theos.git $HOME/theos
+          sudo apt-get install -y fakeroot git make perl build-essential clang lld
+      - name: Setup Theos and toolchain
+        run: |
+          git clone --recursive https://github.com/theos/theos.git $HOME/theos
+          mkdir -p $HOME/theos/toolchain/linux/iphone
+          cd $HOME/theos/toolchain/linux/iphone
+          wget -q https://github.com/lighttheflash/llvm-toolchain/archive/refs/heads/main.tar.gz -O toolchain.tar.gz
+          tar xzf toolchain.tar.gz --strip-components=1
       - name: Setup SDK
         run: |
           mkdir -p $HOME/theos/sdks
