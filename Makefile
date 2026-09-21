@@ -8,4 +8,5 @@ TWEAK_NAME = TikTokCommentBot
 TikTokCommentBot_FILES = Tweak.x
 TikTokCommentBot_CFLAGS = -fobjc-arc
 
+THEOS_PACKAGE_DIR_NAME = control
 include $(THEOS_MAKE_PATH)/tweak.mk
