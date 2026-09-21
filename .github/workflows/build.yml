@@ -1,13 +1,1 @@
-name: Build
-on: [push, workflow_dispatch]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: zhubofei/theos-action@v1
-      - run: make package FINAL=yes
-      - uses: actions/upload-artifact@v4
-        with:
-          name: deb
-          path: packages/*.deb
+name: Buildon: [push, workflow_dispatch]jobs:  build:    runs-on: ubuntu-latest    steps:      - uses: actions/checkout@v4      - uses: theos/theos-action@v1      - run: make package FINAL=yes      - uses: actions/upload-artifact@v4        with:          name: TikTokCommentBot_v6.1          path: packages/*.deb
