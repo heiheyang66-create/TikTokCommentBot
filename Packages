@@ -1,0 +1,14 @@
+Package: com.darklord.TiktokTOOL
+Name: TiktokTOOL
+Version: 6.1
+Architecture: iphoneos-arm64
+Description: TikTok Comment Auto Reply Bot
+Maintainer: heiheyang66
+Author: heiheyang66
+Section: Tweaks
+Depends: mobilesubstrate, ellekit
+Filename: debs/TiktokTOOL_6.1.deb
+Size: 3930
+MD5sum: 6a62189efb1ee5671314d4ff39edbb11
+SHA256: 1b3384bab55cc599126c1383d6f34676249ce0a78782de141d6c22a89c3d2cf8
+
