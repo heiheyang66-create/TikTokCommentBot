@@ -16,9 +16,9 @@ jobs:
           cd $THEOS/sdks
           wget -q https://github.com/xybp888/iOS-SDKs/archive/master.tar.gz -O sdk.tar.gz
           tar xzf sdk.tar.gz --strip-components=1
-          cd -
+          cd $GITHUB_WORKSPACE/TikTokCommentBot
           make package FINAL=yes
       - uses: actions/upload-artifact@v4
         with:
           name: deb
-          path: packages/*.deb
+          path: TikTokCommentBot/packages/*.deb
