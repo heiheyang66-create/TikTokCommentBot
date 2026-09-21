@@ -1,5 +1,6 @@
 TARGET := iphone:clang:latest:15.0
 INSTALL_TARGET_PROCESSES := TikTok
+THEOS_PACKAGE_DIR_NAME = DEBIAN
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = TikTokCommentBot
