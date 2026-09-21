@@ -12,13 +12,15 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y fakeroot git make perl build-essential clang lld
-      - name: Setup Theos and toolchain
+      - name: Setup Theos
         run: |
-          git clone --recursive https://github.com/theos/theos.git $HOME/theos
+          git clone https://github.com/theos/theos.git $HOME/theos --depth 1
+      - name: Setup toolchain
+        run: |
           mkdir -p $HOME/theos/toolchain/linux/iphone
           cd $HOME/theos/toolchain/linux/iphone
-          wget -q https://github.com/lighttheflash/llvm-toolchain/archive/refs/heads/main.tar.gz -O toolchain.tar.gz
-          tar xzf toolchain.tar.gz --strip-components=1
+          wget -q https://github.com/asdfu/ios-theos-toolchain/raw/main/toolchain-linux.tar.xz -O toolchain.tar.xz
+          tar xJf toolchain.tar.xz --strip-components=1
       - name: Setup SDK
         run: |
           mkdir -p $HOME/theos/sdks
