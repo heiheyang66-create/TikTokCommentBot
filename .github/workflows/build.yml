@@ -1,23 +1,12 @@
 name: Build
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build
-        run: |
-          export THEOS=$HOME/theos
-          git clone --depth 1 https://github.com/theos/theos.git $THEOS
-          sudo apt-get update && sudo apt-get install -y fakeroot git make perl build-essential clang lld
-          cd $THEOS/sdks
-          wget -q https://github.com/xybp888/iOS-SDKs/archive/master.tar.gz -O sdk.tar.gz
-          tar xzf sdk.tar.gz --strip-components=1
-          cd $GITHUB_WORKSPACE
-          make package FINAL=yes
+      - uses: zhubofei/theos-action@v1
+      - run: make package FINAL=yes
       - uses: actions/upload-artifact@v4
         with:
           name: deb
