@@ -1,0 +1,11 @@
+Package: com.tiktokcommentbot
+Name: TikTokCommentBot
+Version: 1.0
+Description: TikTok评论区意向客户自动回复机器人
+Section: Tweaks
+Depends: ellekit, mobilesubstrate
+Priority: optional
+Author: Doubao
+Maintainer: Doubao
+Architecture: iphoneos-arm64
+Tag: role::tweak

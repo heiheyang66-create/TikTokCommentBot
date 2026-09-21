@@ -1,0 +1,12 @@
+{
+    "isRunning" : false,
+    "scanCommentCount" : 100,
+    "strongSignalOnly" : true,
+    "replyEnabled" : true,
+    "replyDelayMin" : 15,
+    "replyDelayMax" : 45,
+    "workDuration" : 10,
+    "restDuration" : 5,
+    "dailyMaxReplies" : 800,
+    "riskDetectionEnabled" : true
+}

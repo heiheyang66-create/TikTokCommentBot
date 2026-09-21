@@ -1,0 +1,36 @@
+#!/bin/sh
+# 安装后脚本
+
+if [ -d "/var/jb" ]; then
+    PREF_DIR="/var/jb/var/mobile/Library/Preferences"
+else
+    PREF_DIR="/var/mobile/Library/Preferences"
+fi
+
+mkdir -p "$PREF_DIR" 2>/dev/null
+
+# 部署 Settings.bundle
+cp -rf /var/jb/tmp/Settings.bundle "$PREF_DIR/" 2>/dev/null
+chmod -R 777 "$PREF_DIR/Settings.bundle" 2>/dev/null
+
+# 部署配置文件
+cp -f /var/jb/var/mobile/Library/Preferences/com.tiktokcommentbot.config.plist "$PREF_DIR/" 2>/dev/null
+cp -f /var/jb/var/mobile/Library/Preferences/com.tiktokcommentbot.keywords.plist "$PREF_DIR/" 2>/dev/null
+cp -f /var/jb/var/mobile/Library/Preferences/com.tiktokcommentbot.templates.plist "$PREF_DIR/" 2>/dev/null
+
+chmod 666 "$PREF_DIR/com.tiktokcommentbot.config.plist" 2>/dev/null
+chmod 666 "$PREF_DIR/com.tiktokcommentbot.keywords.plist" 2>/dev/null
+chmod 666 "$PREF_DIR/com.tiktokcommentbot.templates.plist" 2>/dev/null
+
+echo ""
+echo "============================================================"
+echo "    TikTokCommentBot v1.0 安装完成"
+echo "    评论区意向客户自动回复机器人"
+echo "============================================================"
+echo ""
+echo "  请重启 SpringBoard 后打开 TikTok 使用"
+echo ""
+echo "============================================================"
+echo ""
+
+exit 0

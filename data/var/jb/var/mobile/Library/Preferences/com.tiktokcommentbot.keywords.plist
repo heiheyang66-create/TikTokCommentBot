@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contextWords</key>
+	<array>
+		<string>how</string>
+		<string>where</string>
+		<string>when</string>
+		<string>can</string>
+		<string>could</string>
+		<string>please</string>
+		<string>pls</string>
+		<string>buy</string>
+		<string>pay</string>
+		<string>whatsapp</string>
+		<string>dm</string>
+		<string>ship</string>
+		<string>stock</string>
+		<string>sale</string>
+		<string>shop</string>
+		<string>cart</string>
+		<string>checkout</string>
+		<string>money</string>
+		<string>want</string>
+		<string>take</string>
+		<string>this</string>
+		<string>that</string>
+		<string>these</string>
+		<string>those</string>
+		<string>one</string>
+		<string>here</string>
+		<string>for</string>
+		<string>about</string>
+	</array>
+	<key>strongKeywords</key>
+	<array>
+		<string>how much</string>
+		<string>how much is it</string>
+		<string>how much is this</string>
+		<string>how much are</string>
+		<string>how much does</string>
+		<string>whats the price</string>
+		<string>what is the price</string>
+		<string>price please</string>
+		<string>price of this</string>
+		<string>price of</string>
+		<string>how to pay</string>
+		<string>payment</string>
+		<string>for sale</string>
+		<string>on sale</string>
+		<string>i want</string>
+		<string>i want this</string>
+		<string>i want one</string>
+		<string>i want it</string>
+		<string>i want to buy</string>
+		<string>i want to order</string>
+		<string>wanna buy</string>
+		<string>wanna get</string>
+		<string>ill take it</string>
+		<string>i will take</string>
+		<string>i take it</string>
+		<string>il take it</string>
+		<string>i will buy</string>
+		<string>buy it</string>
+		<string>buy now</string>
+		<string>to buy</string>
+		<string>interested</string>
+		<string>im interested</string>
+		<string>i am interested</string>
+		<string>need this</string>
+		<string>need one</string>
+		<string>grab this</string>
+		<string>where to buy</string>
+		<string>where can i buy</string>
+		<string>where do i buy</string>
+		<string>where can i get</string>
+		<string>where can i find</string>
+		<string>how to buy</string>
+		<string>how do i buy</string>
+		<string>how can i buy</string>
+		<string>how do i get</string>
+		<string>how to get</string>
+		<string>how to order</string>
+		<string>how do i order</string>
+		<string>how can i order</string>
+		<string>can i order</string>
+		<string>can i buy</string>
+		<string>place order</string>
+		<string>place an order</string>
+		<string>where from</string>
+		<string>link please</string>
+		<string>send link</string>
+		<string>send me link</string>
+		<string>send the link</string>
+		<string>link in bio</string>
+		<string>in stock</string>
+		<string>restock</string>
+		<string>still available</string>
+		<string>is this available</string>
+		<string>is it available</string>
+		<string>are these available</string>
+		<string>sold out</string>
+		<string>do you have</string>
+		<string>do you ship</string>
+		<string>still have</string>
+		<string>shipping cost</string>
+		<string>free shipping</string>
+		<string>shipping to</string>
+		<string>ship to</string>
+		<string>ship me</string>
+		<string>do you deliver</string>
+		<string>deliver to</string>
+		<string>delivery to</string>
+		<string>delivery cost</string>
+		<string>free delivery</string>
+		<string>worldwide delivery</string>
+		<string>delivery available</string>
+		<string>how much is delivery</string>
+		<string>what size</string>
+		<string>what sizes</string>
+		<string>which size</string>
+		<string>size guide</string>
+		<string>what color</string>
+		<string>what colour</string>
+		<string>dm me</string>
+		<string>dm you</string>
+		<string>send dm</string>
+		<string>message me</string>
+		<string>msg me</string>
+		<string>whatsapp</string>
+		<string>whatsapp me</string>
+		<string>wame</string>
+		<string>contact me</string>
+		<string>contact you</string>
+		<string>add me</string>
+		<string>add you</string>
+		<string>your number</string>
+		<string>your whatsapp</string>
+		<string>give me your</string>
+		<string>is it authentic</string>
+		<string>is this authentic</string>
+		<string>authentic guaranteed</string>
+		<string>guaranteed authentic</string>
+		<string>100 authentic</string>
+		<string>is it original</string>
+		<string>is this original</string>
+		<string>is it real</string>
+		<string>real or fake</string>
+		<string>more details</string>
+		<string>details please</string>
+		<string>more info</string>
+		<string>info please</string>
+		<string>more information</string>
+		<string>send details</string>
+	</array>
+	<key>weakKeywords</key>
+	<array>
+		<string>price</string>
+		<string>cost</string>
+		<string>link</string>
+		<string>order</string>
+		<string>get it</string>
+		<string>i need</string>
+		<string>available</string>
+		<string>availability</string>
+		<string>sizes</string>
+		<string>colors</string>
+		<string>colours</string>
+		<string>shipping</string>
+		<string>delivery</string>
+		<string>send more</string>
+	</array>
+</dict>
+</plist>
